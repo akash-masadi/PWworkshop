@@ -3,6 +3,7 @@ const serverConfig = require('./config/server.config');
 const mongoose =require('mongoose');
 const dbConfig=require('./config/db.config');
 const userModel=require('./models/user.model');
+const bcrypt=require('bcrypt');
 const app = express();
 
 /*
@@ -41,7 +42,7 @@ async function init()
     userID:"admin",
     email:"akashmasadi6@gmail.com",
     userType:"ADMIN",
-    password:"Welcome1"
+    password:bcrypt.hashSync("Welcome1",8)
    });
    console.log(admin);
 }
@@ -49,5 +50,3 @@ async function init()
 app.listen(serverConfig.PORT, () => {
     console.log('Server running on port '+serverConfig.PORT+'...');
 });
-
-
