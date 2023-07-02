@@ -1,5 +1,5 @@
 {
-  "name": "nodejs",
+  "name": "PWworkshop",
   "version": "1.0.0",
   "description": "An Basic App using NodeJS,MondgoDB,ExpressJS",
   "main": "index.js",
